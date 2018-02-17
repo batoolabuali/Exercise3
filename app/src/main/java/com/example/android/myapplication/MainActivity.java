@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Toast;
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 blueRectangleColor = Color.rgb(
                         i,
                         i,
-                        (Color.BLUE) + i);
+                        Color.blue(blueRectangleColor));
                 redRectangle.setBackgroundColor(redRectangleColor);
                 blueRectangle.setBackgroundColor(blueRectangleColor);
             }
@@ -82,8 +83,9 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.info) {
-            final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            final AlertDialog.Builder alert = new AlertDialog.Builder(this, R.style.AlertDialogStyle);
             alert.setMessage("For more info about this Training Task.\nPlease visit 1MAC disscussion formus!");
+
 
             alert.setPositiveButton("Visit Forums", new DialogInterface.OnClickListener() {
                 @Override
@@ -102,6 +104,9 @@ public class MainActivity extends AppCompatActivity {
 
             AlertDialog dialog = alert.create();
             dialog.show();
+//            dialog.getButton(dialog.BUTTON_NEGATIVE).setBackgroundColor(Color.WHITE);
+//            dialog.getButton(dialog.BUTTON_POSITIVE).setBackgroundColor(Color.WHITE);
+
 
         }
 

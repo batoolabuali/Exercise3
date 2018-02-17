@@ -79,5 +79,6 @@
         android:progressDrawable="@drawable/seek_progress"
         android:layout_marginLeft="16dp"
         android:thumb="@drawable/seek_thumb"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginBottom="24dp"
+        android:max="255"/>
 </LinearLayout>
